@@ -168,6 +168,7 @@ GENERAL LAYOUT
 .attribution {
     font-size: 11px; text-align: center;
     opacity: .5;
+    transform: translateY(-20px);
 }
 
 .attribution a {
@@ -219,6 +220,10 @@ GENERAL LAYOUT
 }
 
 @media (min-width: 1200px) {
+    .body {
+        background-position: initial;
+        background-size: initial;
+    }
     .main {
         padding: 64px 80px 40px 80px;
     }
@@ -228,7 +233,7 @@ GENERAL LAYOUT
     }
 
     .logo-container {
-        margin-bottom: 104px;
+        margin-bottom: 80px;
     }
 
     .logo {
@@ -275,5 +280,9 @@ GENERAL LAYOUT
 @media (min-width: 1440px) {
     .container {
         min-height: initial;
+    }
+
+    .hero-content {
+        transform: translateY(-35px);
     }
 }
