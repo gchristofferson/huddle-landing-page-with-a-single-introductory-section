@@ -49,6 +49,36 @@ button {
     line-height: 14px;
 }
 
+.social__icons {
+    font-size: 12px;
+}
+
+.fa-instagram {
+    font-size: 15px;
+}
+
+@media (min-width: 1200px) {
+    body,
+    button  {
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    h1 {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    .social__icons {
+        font-size: 18px;
+    }
+
+    .fa-instagram {
+        font-size: 21px;
+    }
+}
+
 /* ===============================
 GENERAL LAYOUT
 =============================== */
@@ -67,11 +97,13 @@ GENERAL LAYOUT
 .container {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .logo-container {
     display: flex;
     margin-bottom: 54px;
+    align-self: flex-start;
 }
 
 .logo {
@@ -99,18 +131,38 @@ GENERAL LAYOUT
     border-radius: 50px;
     border: 0;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.269022);
+    transition: color, background 250ms;
+}
+
+.hero-content__btn:hover,
+.hero-content__btn:focus {
+    background: var(--soft-magenta);
+    color: #fff;
+    cursor: pointer;
 }
 
 .social__icons {
-    max-width: 102px;
+    display: flex;
+    justify-content: space-between;
+    min-width: 104px;
 }
 
 .social__icons-icon {
-    font-size: 25px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    min-width: 28px;
+    min-height: 28px;
 }
 
-.social__icons-icon + .social__icons-icon {
-    margin-left: 10px;
+.social__icons-icon:hover,
+.social__icons-icon:focus {
+    color: var(--soft-magenta);
+    border-color: var(--soft-magenta);
+    cursor: pointer;
+}
+
+.fab {
+    transform: translateY(2px);
 }
 
 .attribution {
@@ -134,12 +186,16 @@ GENERAL LAYOUT
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        align-items: center;
         min-height: 100vh;
+        margin: auto;
     }
 
     .logo-container {
         width: 100%;
+    }
+
+    .logo {
+        max-width: 160px;
     }
 
     .hero-img-container {
@@ -147,7 +203,7 @@ GENERAL LAYOUT
     }
 
     .hero-content {
-        width: 48%;
+        width: 45%;
         text-align: initial;
     }
 
@@ -162,3 +218,62 @@ GENERAL LAYOUT
     }
 }
 
+@media (min-width: 1200px) {
+    .main {
+        padding: 64px 80px 40px 80px;
+    }
+
+    .container {
+        max-width: 1440px;
+    }
+
+    .logo-container {
+        margin-bottom: 104px;
+    }
+
+    .logo {
+        min-width: 200px;
+    }
+
+    .hero-img-container {
+        margin-bottom: 0;
+        width: 55%;
+    }
+
+    .hero-img {
+        min-width: 100%;
+    }
+
+    .hero-content {
+        margin-bottom: 27px;
+        width: 40%;
+    }
+
+    .hero-content__title,
+    .hero-content__btn {
+        margin-bottom: 24px;
+    }
+
+    .hero-content__btn {
+        padding: 16px 64px;
+    }
+
+    .social__icons {
+        min-width: 152px;
+    }
+
+    .social__icons-icon {
+        min-width: 40px;
+        min-height: 40px;
+    }
+
+    .fab {
+        transform: translateY(6px);
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        min-height: initial;
+    }
+}
