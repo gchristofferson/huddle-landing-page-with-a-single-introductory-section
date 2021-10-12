@@ -203,6 +203,7 @@ GENERAL LAYOUT
         display: flex;
         flex-direction: column;
         width: 100%;
+        transform: translateY(17px);
     }
 
     .social__icons {
