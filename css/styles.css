@@ -49,13 +49,6 @@ button {
     line-height: 14px;
 }
 
-.social__icons {
-    font-size: 12px;
-}
-
-.fa-instagram {
-    font-size: 15px;
-}
 
 @media (min-width: 1200px) {
     body,
@@ -70,13 +63,6 @@ button {
         line-height: 60px;
     }
 
-    .social__icons {
-        font-size: 18px;
-    }
-
-    .fa-instagram {
-        font-size: 21px;
-    }
 }
 
 /* ===============================
@@ -162,7 +148,12 @@ GENERAL LAYOUT
 }
 
 .fab {
-    transform: translateY(2px);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
 }
 
 .attribution {
@@ -273,7 +264,7 @@ GENERAL LAYOUT
     }
 
     .fab {
-        transform: translateY(6px);
+        font-size: 1.25rem;
     }
 }
 
